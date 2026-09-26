@@ -11,3 +11,4 @@
 8. In Supabase Authentication > URL Configuration, set Site URL to your Vercel URL and add the same URL under Redirect URLs.
 
 Scoring: 100 points/hour + (10 × streak day), streak bonus capped at 100 points per submission/day.
+80HD website
