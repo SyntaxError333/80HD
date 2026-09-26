@@ -33,3 +33,10 @@ body{background:var(--bg);color:var(--text);transition:background .2s,color .2s}
 .analytics-bar{height:8px;background:var(--card-soft);border:1px solid var(--border);border-radius:20px;overflow:hidden}
 .analytics-bar i{display:block;height:100%;background:var(--accent);border-radius:20px;transition:width .35s ease}
 @media(max-width:600px){.analytics-summary{grid-template-columns:1fr}.analytics-summary div{border-right:0;border-bottom:1px solid var(--border)}.analytics-summary div:last-child{border-bottom:0}.analytics-head{align-items:flex-start}.week-change strong{font-size:20px}}
+
+/* Accountability reactions */
+.reaction-bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.reaction{padding:7px 10px;border-radius:999px;border:1px solid var(--border);background:var(--card-soft);color:var(--text);font-size:12px;font-weight:600}
+.reaction:hover{border-color:var(--accent)}
+.reaction.active{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
+.reaction span{display:inline-grid;place-items:center;min-width:18px;height:18px;margin-left:6px;padding:0 5px;border-radius:999px;background:color-mix(in srgb,var(--text) 10%,transparent);font-size:10px}
