@@ -11,6 +11,7 @@
 - Multiple user accounts
 - Point-based ranking system
 - Progress synced across devices
+- Analytics of study hours for the week
 
 ## Scoring
 
