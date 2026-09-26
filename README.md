@@ -12,6 +12,7 @@
 - Point-based ranking system
 - Progress synced across devices
 - Analytics of study hours for the week
+- Light and dark mode
 
 ## Scoring
 
