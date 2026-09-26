@@ -1,14 +1,21 @@
 # 80HD
+## About
 
-## Put it online
-1. Create a free Supabase project at https://supabase.com
-2. Open SQL Editor, paste all of `supabase.sql`, and run it.
-3. In Supabase > Project Settings > API, copy the Project URL and anon/public key.
-4. Rename `.env.example` to `.env` and paste those values.
-5. Run `npm install` then `npm run dev` to test locally.
-6. Push this folder to GitHub and import it into Vercel at https://vercel.com
-7. In Vercel Project Settings > Environment Variables add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`, then deploy.
-8. In Supabase Authentication > URL Configuration, set Site URL to your Vercel URL and add the same URL under Redirect URLs.
+80HD lets users track their study progress, build streaks, earn points, and compete on a shared leaderboard.
 
-Scoring: 100 points/hour + (10 × streak day), streak bonus capped at 100 points per submission/day.
-80HD website
+## Features
+
+- Study-time tracking
+- Daily study streaks
+- Live leaderboard
+- Multiple user accounts
+- Point-based ranking system
+- Progress synced across devices
+
+## Scoring
+
+Points are awarded based on study time and consistency.
+
+100 points are awarded per hour studied, with additional bonuses for maintaining a study streak.
+
+---
