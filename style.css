@@ -40,7 +40,7 @@ body{background:var(--bg);color:var(--text);transition:background .2s,color .2s}
 .reaction:hover{border-color:var(--accent)}
 .reaction.active{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
 .reaction span{display:inline-grid;place-items:center;min-width:18px;height:18px;margin-left:6px;padding:0 5px;border-radius:999px;background:color-mix(in srgb,var(--text) 10%,transparent);font-size:10px}
-/* Cute donut analytics â€” paste at the END of style.css */
+/* Cute donut analytics Ã¢â‚¬â€ paste at the END of style.css */
 .donut-card{overflow:hidden}.donut-title{text-align:center;margin-bottom:8px}.donut-title small{font-size:11px;font-weight:700;letter-spacing:1.6px;color:var(--muted)}.donut-title h2{justify-content:center;margin:5px 0 4px}.donut-title p{margin:0;font-size:12px}.donut-layout{display:grid;grid-template-columns:minmax(280px,.9fr) 1fr;align-items:center;gap:28px}.donut-wrap{display:grid;place-items:center;min-height:330px}.study-donut{width:min(330px,100%);overflow:visible}.donut-slice{transform-box:fill-box;transform-origin:center;transition:transform .18s ease;cursor:pointer}.donut-value{font:700 25px 'Space Grotesk';fill:var(--text)}.donut-label{font:600 11px 'DM Sans';fill:var(--muted);text-transform:uppercase;letter-spacing:.8px}.donut-side{display:grid;gap:20px}.donut-legend{display:grid;gap:9px}.legend-row{display:grid;grid-template-columns:13px 1fr auto;align-items:center;gap:10px;padding:9px 10px;border-radius:7px;transition:background .15s}.legend-row:hover{background:var(--card-soft)}.legend-row i{width:11px;height:11px;border-radius:50%;box-shadow:inset 0 -2px 3px #0002}.legend-row span{font-size:13px;font-weight:600}.legend-row strong{font:700 13px 'Space Grotesk'}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:7px;overflow:hidden}.mini-stats div{padding:13px 10px;display:grid;gap:4px;border-right:1px solid var(--border)}.mini-stats div:last-child{border-right:0}.mini-stats span{font-size:9px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted)}.mini-stats strong{font:700 13px 'Space Grotesk'}@media(max-width:700px){.donut-layout{grid-template-columns:1fr;gap:4px}.donut-wrap{min-height:290px}.study-donut{width:min(290px,100%)}.mini-stats{grid-template-columns:1fr}.mini-stats div{border-right:0;border-bottom:1px solid var(--border)}.mini-stats div:last-child{border-bottom:0}}
 
 
@@ -73,7 +73,7 @@ button{background:var(--accent);color:var(--accent-text)}
 
 /* Dedicated public study logs page */
 .app-body{min-height:calc(100vh - 74px)}
-.site-nav{position:sticky;top:74px;z-index:30;display:flex;gap:8px;padding:10px max(5vw,24px);background:color-mix(in srgb,var(--card) 92%,transparent);border-bottom:1px solid var(--border);backdrop-filter:blur(16px)}
+.site-nav{position:sticky;top:0;z-index:30;display:flex;gap:8px;padding:10px max(5vw,24px);background:color-mix(in srgb,var(--card) 92%,transparent);border-bottom:1px solid var(--border);backdrop-filter:blur(16px)}
 .site-nav button{display:flex;align-items:center;gap:8px;padding:9px 13px;background:transparent;color:var(--muted);border:1px solid transparent;border-radius:9px;transition:background .18s ease,color .18s ease,transform .18s ease,border-color .18s ease}
 .site-nav button:hover{background:var(--card-soft);color:var(--text);transform:translateY(-1px)}
 .site-nav button.active{background:color-mix(in srgb,var(--accent) 18%,var(--card));color:var(--text);border-color:color-mix(in srgb,var(--accent) 38%,var(--border))}
@@ -123,7 +123,7 @@ button{background:var(--accent);color:var(--accent-text)}
 .logout-button:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
 
 @media(max-width:760px){
-  .site-nav{top:74px;overflow-x:auto}
+  .site-nav{top:0;overflow-x:auto}
   .logs-shell{grid-template-columns:1fr}
   .people-panel{border-right:0;border-bottom:1px solid var(--border)}
   .people-list{display:flex;overflow-x:auto;gap:6px;padding:8px}
