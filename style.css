@@ -263,5 +263,56 @@ button{background:var(--accent);color:var(--accent-text)}
   .edit-profile-button{grid-column:1/-1;justify-self:stretch;margin-top:14px}
   .profile-editor-actions{display:grid;grid-template-columns:1fr 1fr}
 }
+/* Profile layout update: creator contacts for everyone + account editor at bottom */
+.profile-contact-section{
+  position:relative;
+  z-index:2;
+  grid-column:1/-1;
+  margin-top:28px;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+}
+.profile-contact-section>small,
+.profile-edit-bottom small{
+  display:block;
+  margin-bottom:5px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:var(--muted);
+}
+.profile-contact-section h2{
+  margin:0;
+  font:700 22px 'Space Grotesk';
+  color:var(--text);
+}
+.profile-contact-section>p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.profile-contact-section .profile-links{margin-top:16px}
+.profile-edit-bottom{
+  position:relative;
+  z-index:2;
+  grid-column:1/-1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:28px;
+  padding-top:22px;
+  border-top:1px solid var(--border);
+}
+.profile-edit-bottom b{display:block;color:var(--text);font-size:14px}
+.profile-edit-bottom .profile-editor{
+  flex:1;
+  margin-top:0;
+}
+.profile-edit-bottom .profile-message{
+  flex-basis:100%;
+}
+@media(max-width:600px){
+  .profile-edit-bottom{align-items:stretch;flex-direction:column}
+  .profile-edit-bottom .edit-profile-button{margin-top:0}
+}
+
+
 
 
