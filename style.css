@@ -230,3 +230,38 @@ button{background:var(--accent);color:var(--accent-text)}
   .profile-copy h1{font-size:27px}
   .profile-links{grid-template-columns:1fr}
 }
+
+/* Editable profile controls */
+.edit-profile-button{
+  position:relative;z-index:2;justify-self:end;
+  border:1px solid var(--border);background:var(--card-soft);color:var(--text);
+  border-radius:9px;padding:10px 15px;font-weight:700;cursor:pointer;
+}
+.edit-profile-button:hover{border-color:var(--accent);transform:translateY(-1px)}
+.profile-editor{
+  position:relative;z-index:2;grid-column:1/-1;width:100%;margin-top:24px;
+  display:grid;gap:12px;
+}
+.profile-editor label{display:grid;gap:7px;font-size:12px;font-weight:700;color:var(--text)}
+.profile-editor input{
+  width:100%;box-sizing:border-box;border:1px solid var(--border);border-radius:8px;
+  background:var(--input);color:var(--text);padding:12px 13px;font:inherit;
+}
+.profile-editor input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+.profile-editor-actions{display:flex;justify-content:flex-end;gap:9px}
+.profile-editor-actions button{
+  border:1px solid var(--accent);border-radius:8px;padding:10px 14px;
+  background:var(--accent);color:var(--accent-text);font-weight:700;cursor:pointer;
+}
+.profile-editor-actions .profile-cancel{background:transparent;color:var(--text);border-color:var(--border)}
+.profile-message{position:relative;z-index:2;grid-column:1/-1;margin:10px 0 0;color:var(--muted);font-size:12px}
+.social-mark,.linkedin-mark{
+  width:21px;height:21px;display:inline-grid;place-items:center;border-radius:5px;
+  font-size:10px;font-weight:800;letter-spacing:-.2px;
+}
+@media(max-width:600px){
+  .edit-profile-button{grid-column:1/-1;justify-self:stretch;margin-top:14px}
+  .profile-editor-actions{display:grid;grid-template-columns:1fr 1fr}
+}
+
+
