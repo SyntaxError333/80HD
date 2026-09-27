@@ -39,14 +39,27 @@ const logsPage=<section className="logs-page">
   </div>
 </section>;
 
-const isAngela=(profile?.username||'').toLowerCase()==='angela_cheng';
 const profilePage=<section className="profile-page"><div className="profile-card">
   <div className="profile-avatar">{(profile?.username||'U').slice(0,2).toUpperCase()}</div>
-  <div className="profile-copy"><small>PROFILE</small><h1>{isAngela?'Angela Cheng':`@${profile?.username||'user'}`}</h1>{isAngela&&<p>human</p>}</div>
-  {!editingProfile?<button type="button" className="edit-profile-button" onClick={()=>{setProfileForm({username:profile?.username||''});setProfileMsg('');setEditingProfile(true)}}>Edit profile</button>:
-  <form className="profile-editor" onSubmit={saveProfile}><label>Username<input autoFocus required maxLength="30" value={profileForm.username} onChange={e=>setProfileForm({username:e.target.value})}/></label><div className="profile-editor-actions"><button type="button" className="profile-cancel" onClick={()=>{setEditingProfile(false);setProfileMsg('')}}>Cancel</button><button type="submit">Save username</button></div></form>}
-  {profileMsg&&<p className="profile-message">{profileMsg}</p>}
-  {isAngela&&<div className="profile-links"><a href="https://www.instagram.com/angela._.3z3/" target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">IG</span><span>Instagram</span></a><a href="https://github.com/SyntaxError333" target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">GH</span><span>GitHub</span></a><a href="https://www.linkedin.com/in/angela-cheng-277b8843a/" target="_blank" rel="noopener noreferrer"><span className="linkedin-mark" aria-hidden="true">in</span><span>LinkedIn</span></a></div>}
+  <div className="profile-copy"><small>YOUR PROFILE</small><h1>@{profile?.username||'user'}</h1></div>
+
+  <div className="profile-contact-section">
+    <small>CREATOR</small>
+    <h2>Angela Cheng</h2>
+    <p>human</p>
+    <div className="profile-links">
+      <a href="https://www.instagram.com/angela._.3z3/" target="_blank" rel="noopener noreferrer"><span className="social-mark" aria-hidden="true">IG</span><span>Instagram</span></a>
+      <a href="https://github.com/SyntaxError333" target="_blank" rel="noopener noreferrer"><span className="social-mark" aria-hidden="true">GH</span><span>GitHub</span></a>
+      <a href="https://www.linkedin.com/in/angela-cheng-277b8843a/" target="_blank" rel="noopener noreferrer"><span className="linkedin-mark" aria-hidden="true">in</span><span>LinkedIn</span></a>
+    </div>
+  </div>
+
+  <div className="profile-edit-bottom">
+    <div><small>ACCOUNT</small><b>Edit your profile</b></div>
+    {!editingProfile?<button type="button" className="edit-profile-button" onClick={()=>{setProfileForm({username:profile?.username||''});setProfileMsg('');setEditingProfile(true)}}>Edit username</button>:
+    <form className="profile-editor" onSubmit={saveProfile}><label>Username<input autoFocus required maxLength="30" value={profileForm.username} onChange={e=>setProfileForm({username:e.target.value})}/></label><div className="profile-editor-actions"><button type="button" className="profile-cancel" onClick={()=>{setEditingProfile(false);setProfileMsg('')}}>Cancel</button><button type="submit">Save username</button></div></form>}
+    {profileMsg&&<p className="profile-message">{profileMsg}</p>}
+  </div>
 </div></section>;
 
 return <div className="site-shell">
@@ -62,4 +75,3 @@ return <div className="site-shell">
     <footer className="angela-credit"><strong>80HD</strong><span>Created by Angela • Designed by Angela • Developed by Angela • Directed by Angela • Produced by Angela • Concept by Angela • Quality controlled by Angela • Academic chaos managed by Angela</span><small>© 2026 Angela. All rights reserved.</small></footer>
   </main>
 </div></div>};createRoot(document.getElementById('root')).render(<App/>);
-
