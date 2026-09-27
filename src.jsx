@@ -1,4 +1,4 @@
-import React,{useEffect,useMemo,useState}from'react';import{createRoot}from'react-dom/client';import{createClient}from'@supabase/supabase-js';import{Trophy,Flame,Clock,BookOpen,LogOut,PlusCircle,Medal,Sun,Moon,X,LayoutDashboard,Users,ChevronRight,UserRound,Instagram,Github}from'lucide-react';import'./style.css';import StudyAnalytics from'./components/StudyAnalytics.jsx';
+import React,{useEffect,useMemo,useState}from'react';import{createRoot}from'react-dom/client';import{createClient}from'@supabase/supabase-js';import{Trophy,Flame,Clock,BookOpen,LogOut,PlusCircle,Medal,Sun,Moon,X,LayoutDashboard,Users,ChevronRight,UserRound}from'lucide-react';import'./style.css';import StudyAnalytics from'./components/StudyAnalytics.jsx';
 const supabase=createClient(import.meta.env.VITE_SUPABASE_URL,import.meta.env.VITE_SUPABASE_ANON_KEY);
 const SUBJECTS=['Biology','Physics','Chemistry','Psychology'];
 function words(s){return s.trim()?s.trim().split(/\s+/).length:0}function pts(hours,streak){return Math.round(hours*100)+Math.min(streak*10,100)}
@@ -38,7 +38,7 @@ const logsPage=<section className="logs-page">
   </div>
 </section>;
 
-const profilePage=<section className="profile-page"><div className="profile-card"><div className="profile-avatar">AC</div><div className="profile-copy"><small>PROFILE</small><h1>Angela Cheng</h1><p>human</p></div><div className="profile-links"><a href="https://www.instagram.com/angela._.3z3/" target="_blank" rel="noreferrer"><Instagram size={21}/><span>Instagram</span></a><a href="https://github.com/SyntaxError333" target="_blank" rel="noreferrer"><Github size={21}/><span>GitHub</span></a><a href="https://www.linkedin.com/in/angela-cheng-277b8843a/" target="_blank" rel="noreferrer"><span className="linkedin-mark" aria-hidden="true">in</span><span>LinkedIn</span></a></div></div></section>;
+const profilePage=<section className="profile-page"><div className="profile-card"><div className="profile-avatar">AC</div><div className="profile-copy"><small>PROFILE</small><h1>Angela Cheng</h1><p>human</p></div><div className="profile-links"><a href="https://www.instagram.com/angela._.3z3/" target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">IG</span><span>Instagram</span></a><a href="https://github.com/SyntaxError333" target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">GH</span><span>GitHub</span></a><a href="https://www.linkedin.com/in/angela-cheng-277b8843a/" target="_blank" rel="noreferrer"><span className="linkedin-mark" aria-hidden="true">in</span><span>LinkedIn</span></a></div></div></section>;
 
 return <div className="site-shell">
 <header><div><b>80HD</b><span>Academic Competition</span></div><div className="user">@{profile?.username}<ThemeButton/><button className="logout-button" type="button" onClick={()=>supabase.auth.signOut()}><LogOut size={17}/><span>Log out</span></button></div></header>
